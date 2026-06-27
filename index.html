@@ -116,30 +116,35 @@
         
         .tab-buttons {
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             justify-content: center;
+            align-items: stretch;
             margin-bottom: 20px;
             position: relative;
             z-index: 1000;
             background-color: white;
-            padding: 10px;
+            padding: 8px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            gap: 10px;
+            gap: 6px;
+            width: 100%;
         }
         
         .tab-btn {
-            flex: 1 1 auto;
-            min-width: 140px;
-            padding: 10px 16px;
+            flex: 1 1 0;
+            min-width: 0;
+            padding: 10px 4px;
             margin: 0;
             background-color: #ffcccb;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             transition: all 0.3s;
-            font-size: 14px;
-            white-space: nowrap;
+            font-size: 12px;
+            line-height: 1.25;
+            white-space: normal;
+            overflow-wrap: break-word;
+            text-align: center;
         }
         
         .tab-btn:hover {
@@ -170,7 +175,7 @@
         /* Estilos para la sección de flores */
         .flowers-section {
             position: relative;
-            min-height: 600px;
+            min-height: 850px;
             overflow: hidden;
             background: linear-gradient(to bottom, #1a1a2e 0%, #16213e 100%);
             padding-top: 20px; /* Reducimos el espacio superior */
@@ -248,7 +253,7 @@
 
         .flowers {
           position: relative;
-          transform: scale(1.6);
+          transform: scale(2.1);
           transform-origin: bottom center;
         }
 
@@ -1491,16 +1496,10 @@
         }
 
         /* Ajustes responsivos para el menú de pestañas */
-        @media (max-width: 600px) {
-            .tab-buttons {
-                gap: 8px;
-            }
+        @media (max-width: 380px) {
             .tab-btn {
-                flex: 1 1 30%;
-                min-width: 0;
-                font-size: 12px;
-                padding: 10px 6px;
-                white-space: normal;
+                font-size: 10px;
+                padding: 8px 3px;
             }
         }
     </style>
